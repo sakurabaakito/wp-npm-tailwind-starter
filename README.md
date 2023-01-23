@@ -1,6 +1,5 @@
 # 概要
-NIBALのWordPressスターターテーマ
-tailwind cssとlaravel mixを利用
+tailwind cssとlaravel mixを利用したWordPressスターターテーマ
 
 # 開発
 ```bash
