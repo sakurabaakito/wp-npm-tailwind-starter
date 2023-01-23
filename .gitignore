@@ -2,9 +2,6 @@
 /dist
 style.css
 style.css.map
-app.js
-app.js.LICENSE.txt
-app.js.map
 mix-manifest.json
 .DS_Store
 .env
