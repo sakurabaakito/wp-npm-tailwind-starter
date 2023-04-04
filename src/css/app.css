@@ -1,3 +1,231 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  [x-cloak] {
+    display: none !important;
+  }
+  html {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.sp-menu-padding {
+  @apply py-5;
+}
+
+@layer components {
+  .category-btn {
+    @apply px-3 py-0.5 md:pt-1 text-white text-[10px] md:text-xs font-bold rounded-full hover:opacity-70;
+  }
+  .tag-btn {
+    @apply mr-1 mt-1 px-3 py-0.5 md:pt-1 bg-gray-1 text-gray-2 text-[10px] md:text-xs font-bold rounded-full hover:opacity-70;
+  }
+
+  .tag-list-btn {
+    @apply mr-2 mt-2 px-3 py-2 text-gray-2 text-sm md:text-base font-bold bg-white rounded-full hover:bg-blue hover:text-white;
+  }
+
+  .btn-active {
+    @apply bg-blue text-white pointer-events-none;
+  }
+  .btn-inactive {
+    @apply bg-white text-primary shadow hover:brightness-95 active:brightness-90;
+  }
+
+  .content-wrap p {
+    @apply text-sm leading-6 md:text-base mb-4;
+  }
+  .content-wrap a {
+    @apply text-blue hover:underline hover:brightness-90 visited:text-purple-600;
+  }
+  .content-wrap strong {
+    background: linear-gradient(transparent 50%, #fcec52 0);
+  }
+  .content-wrap figure {
+    @apply mb-4;
+  }
+  .content-wrap h2 {
+    @apply text-lg md:text-2xl font-bold mt-6 mb-4 pl-3 border-b-2 border-b-blue;
+  }
+  .content-wrap h3 {
+    @apply md:text-[22px] font-bold mt-6 mb-4 pt-1 pl-3 md:pl-5 border-l-4 border-l-blue;
+  }
+  .content-wrap h4 {
+    @apply md:text-[22px] font-bold mt-6 mb-4 pl-3 text-blue;
+  }
+  .content-wrap ul:not(.toc_list) {
+    @apply my-4 pl-2 md:pl-5;
+  }
+  .content-wrap ul:not(.toc_list) li {
+    @apply mb-1.5 text-sm leading-6 md:text-base flex items-start;
+  }
+  /* .content-wrap ul:not(.toc_list) li:before {
+    content: "";
+    @apply w-2 h-2 inline-block bg-blue rounded-full mr-2 relative top-1.5 flex-none;
+  } */
+  .content-wrap ol {
+    @apply list-decimal my-4 pl-6 md:pl-10;
+  }
+  .content-wrap ol li {
+    @apply mb-1.5 text-sm leading-6 md:text-base;
+  }
+  .content-wrap table {
+    @apply w-full mt-5;
+  }
+  .content-wrap table tr:first-child {
+    @apply font-bold bg-secondary;
+  }
+  .content-wrap table td {
+    @apply border border-blue-5 p-1.5 md:p-3;
+  }
+
+  /* swiper */
+  .swiper-slide {
+    @apply transition duration-500;
+  }
+  .swiper-slide-active {
+    @apply z-10 translate-x-0;
+  }
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    @apply !scale-75 blur-sm;
+  }
+  .swiper-slide-prev {
+    @apply !translate-x-3/4;
+  }
+  .swiper-slide-next {
+    @apply !-translate-x-3/4;
+  }
+}
+
+ /* パンくずリスト */
+.breadcrumbs {
+  @apply text-gray text-xs md:text-sm;
+}
+.breadcrumbs a {
+  @apply text-blue;
+}
+#toc_container {
+  @apply px-5 md:px-20 py-6 border-2 border-blue mx-auto my-12;
+}
+#toc_container a {
+  @apply text-black;
+}
+
+ /* 目次 */
+#toc_container ul li {
+  @apply mb-1.5 font-bold;
+}
+#toc_container ul li:before {
+  @apply hidden;
+}
+#toc_container ul ul {
+  @apply mt-1.5;
+}
+#toc_container ul ul li {
+  @apply font-normal text-sm;
+}
+#toc_container span.toc_depth_2 {
+  @apply hidden;
+}
+
+ /* pagenation */
+.wp-pagenavi {
+  @apply space-x-3 flex justify-center;
+}
+.wp-pagenavi .page,
+.previouspostslink,
+.nextpostslink {
+  @apply inline-flex items-center justify-center w-10 h-10 border border-gray-1 hover:bg-blue hover:text-white;
+}
+.wp-pagenavi .current {
+  @apply inline-flex items-center justify-center w-10 h-10 bg-blue text-white;
+}
+
+
+/* ショートコードで関連記事を取得 */
+
+.related_article {
+  margin: 1.8em 0;
+  text-align: left;
+  height: 130px;
+}
+
+.related_article .inbox {
+  padding-left: 45%;
+  @apply md:pl-[28%];
+}
+
+.related_article p.ttl {
+  margin: 0 0 0.1em;
+  font-size: 14px;
+  font-weight: bold;
+  color: black ;
+  @apply md:text-base;
+}
+
+.related_article .ttl:before {
+  content: "関連記事";
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #fff;
+  background: #111;
+  width: 5em;
+  display: inline-block;
+  padding: 0.2em;
+  position: relative;
+  top: -2px;
+  text-align: center;
+  margin-right: 0.5em;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.related_article.labelnone .ttl:before {
+  content: none;
+}
+
+.related_article .date {
+  font-size: 0.8em;
+  color: black;
+}
+
+.related_article .thum {
+  width: 45%;
+  float: left;
+  @apply md:w-[28%];
+}
+
+.related_article .thum img {
+  width: 95%;
+  margin-bottom: 0;
+  @apply md:w-3/4;
+}
+
+.related_article a {
+  color: #333;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 0 #efefef;
+  text-decoration: none;
+  display: block;
+  padding: 0.6em;
+  height: 100%;
+}
+
+.related_article a:hover {
+  color: #666;
+  background: lightyellow;
+}
+
+/* 
+  #menu-header-menu {
+    @apply flex text-sm font-bold;
+  }
+  .menu-item {
+    border-radius: 20px;
+    @apply p-5;
+  } */
