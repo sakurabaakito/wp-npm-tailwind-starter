@@ -3,7 +3,7 @@
         <div class="grid md:grid-cols-12 gap-5">
             <div class="md:col-span-12 lg:col-span-4">
                 <a href="<?= esc_url(home_url()); ?>" class="block">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo-white.png" alt="unison engineer logo" class="w-48 md:w-64 mx-auto">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo-white.png" alt="unizon engineer logo" class="w-48 md:w-64 mx-auto">
                 </a>
             </div>
             <div class="md:col-span-6 lg:col-span-4 px-5 md:px-0">

@@ -69,7 +69,7 @@ get_header();
                             <img src="<?= esc_url(get_template_directory_uri()); ?>/img/cta-bg.png" alt="" width="780" height="506" class="w-full h-full object-cover">
                         </div>
                         <div class="text-white md:w-9/12 mx-auto text-center">
-                            <img src="<?= esc_url(get_template_directory_uri()); ?>/img/unison-career-logo.png" alt="ユニゾンキャリア　ロゴ" width="230" height="40" class="mx-auto">
+                            <img src="<?= esc_url(get_template_directory_uri()); ?>/img/unizon-career-logo.png" alt="ユニゾンキャリア　ロゴ" width="230" height="40" class="mx-auto">
                             <p class="mx-auto mt-5 inline-block px-5 pt-5 pb-4 md:pb-3 text-3xl md:text-4xl font-bold text-blue bg-white">ITエンジニアの<br>転職・就職支援サービス</p>
                             <!-- <p class="text-left mt-5 px-5 text-xs md:text-sm leading-relaxed font-bold tracking-wider">ユニゾンキャリアは、あなたの夢やキャリアをサポートする、ITエンジニア専門の人材紹介サービスです。私たちは、豊富な経験と幅広いネットワークを活かし、あなたに最適な求人情報をご提供します。</p> -->
                             <div class="mt-10 flex flex-wrap justify-center sm:space-x-5 px-5 font-bold">

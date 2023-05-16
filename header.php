@@ -14,8 +14,8 @@
             <div class="px-5 mx-auto md:max-w-7xl">
                 <div class="flex items-center justify-between">
                     <a href="<?= esc_url(home_url()); ?>" class="block">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo.png" alt="unison engineer logo" class="hidden md:block md:w-64">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo-sp.png" alt="unison engineer logo sp" class="w-40 md:hidden">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo.png" alt="unizon engineer logo" class="hidden md:block md:w-64">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo-sp.png" alt="unizon engineer logo sp" class="w-40 md:hidden">
                     </a>
                     <div class="flex items-center">
                         <form x-data="{search: ''}" method="get" action="<?= esc_url(home_url()); ?>" class="hidden lg:flex flex-col md:flex-row items-center justify-center mr-8">
